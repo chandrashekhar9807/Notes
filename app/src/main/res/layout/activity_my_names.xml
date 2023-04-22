@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white5"
+    tools:context=".MyNames">
+
+    <TextView
+        android:id="@+id/MyNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/abril_fatface"
+        android:includeFontPadding="false"
+        android:text="My Notes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+    
+    <LinearLayout
+        android:id="@+id/Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/background_search"
+        android:gravity="center_vertical"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/MyNote"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/search"
+            android:tint="@color/Color1"
+            tools:ignore="UseAppTint" />
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="match_parent"
+            android:layout_height="35sp"
+            android:layout_marginStart="12sp"
+            android:layout_marginEnd="12sp"
+            android:background="@null"
+            android:fontFamily="cursive"
+            android:hint="Chandu Search"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:textColor="@color/Color1"
+            android:textColorHint="#BEC0C1" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/NoteRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingStart="0sp"
+
+        android:paddingEnd="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutAction"
+        app:layout_constraintTop_toBottomOf="@+id/Search" />
+
+
+    <LinearLayout
+        android:id="@+id/layoutAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical"
+        android:padding="15sp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:id="@+id/imageAddNote"
+            android:contentDescription="@string/app_name"
+            android:tint="@color/white"
+            android:src="@drawable/add_outline"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:id="@+id/AddImage"
+            android:contentDescription="@string/app_name"
+            android:tint="@color/white"
+            android:layout_marginStart="18sp"
+            android:src="@drawable/ic_image"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:id="@+id/imageAddWebLink"
+            android:contentDescription="@string/app_name"
+            android:tint="@color/white"
+            android:layout_marginStart="18sp"
+            android:src="@drawable/baseline_language"
+            tools:ignore="UseAppTint" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageAddNoteMain"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/background_add_buttom"
+        android:contentDescription="@string/app_name"
+        android:padding="5sp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/color2"
+
+        app:layout_constraintBottom_toTopOf="@+id/layoutAction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutAction"
+        tools:ignore="UseAppTint" />
+
+
+
+
+
+
+
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
